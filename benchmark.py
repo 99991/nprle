@@ -39,11 +39,11 @@ def test():
 
             circle1_counts = rle_encode(circle1)
 
-            t.stop(size, "rle_encode circle1")
+            t.stop(size, "rle_encode mask1")
 
             circle2_counts = rle_encode(circle2)
 
-            t.stop(size, "rle_encode circle2")
+            t.stop(size, "rle_encode mask2")
 
             intersection = rle_intersect(circle1_counts, circle2_counts)
 
@@ -74,7 +74,8 @@ def test():
     plt.xlabel("Image size")
     plt.ylabel("Time [seconds]")
     plt.xticks(sizes, [f"{size}x{size}" for size in sizes])
-    plt.savefig("benchmark.svg")
+    plt.tight_layout()
+    plt.savefig("benchmark.svg", bbox_inches="tight", pad_inches=0.01)
     plt.show()
 
 if __name__ == "__main__":
