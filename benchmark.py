@@ -75,7 +75,7 @@ def test():
     plt.ylabel("Time [seconds]")
     plt.xticks(sizes, [f"{size}x{size}" for size in sizes])
     plt.tight_layout()
-    plt.savefig("benchmark.svg", bbox_inches="tight", pad_inches=0.01)
+    plt.savefig("benchmark.png", bbox_inches="tight", pad_inches=0.1)
     plt.show()
 
 if __name__ == "__main__":
